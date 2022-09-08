@@ -1,0 +1,20 @@
+.wrapper {
+  max-width: 70rem; /*1120 px de largura total, incluindo a sidebar, o feed e o espaço entre eles dois*/
+  margin: 2rem auto;
+  padding: 0 1rem;
+
+  display: grid;
+  grid-template-columns: 256px 1fr; /*A primeira coluna (sidebar) tem tamanho fixo e a segunda (feed) tem tamanho relativo*/ 
+  gap: 2rem; /*espaçamento entre as colunas*/
+  align-items: flex-start;  /* Faz com que a sidebar e o feed sempre fiquem alinhados para o topo */
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%; /* 16 = 100% então 14 = 87,5% */
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
